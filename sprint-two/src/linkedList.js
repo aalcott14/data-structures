@@ -38,7 +38,6 @@ var LinkedList = function() {
     //compare node to target and if found return true
     currentNode = this.head;
     while (count < length) {
-      debugger;
       if (currentNode.value === target) {
         return true;
       }
