@@ -36,4 +36,19 @@ describe('binarySearchTree', function() {
     binarySearchTree.depthFirstLog(func);
     expect(array).to.eql([5, 2, 3]);
   });
+
+  describe('Student Made', function() {
+    it('should not insert value if the same value has previously been inserted', function() {
+      var array = [];
+      var func = function(value) { array.push(value); };
+      binarySearchTree.insert(2);
+      binarySearchTree.insert(3);
+      binarySearchTree.insert(1);
+      binarySearchTree.insert(2);
+      binarySearchTree.depthFirstLog(func);
+      expect(array).to.eql([5, 2, 1, 3]);
+    });  
+  });
 });
+
+

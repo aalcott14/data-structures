@@ -44,7 +44,26 @@ var LinkedList = function() {
       count++;
       currentNode = currentNode.next;
     }
+    count = 0;
     return false;
+  };
+
+  list.insert = function(newValue, previousNode) {
+    //debugger;
+    currentNode = this.head;
+
+    while (count < length) {
+      if (currentNode.value === previousNode) {
+        count = length;
+        var newNode = Object.create(Node(newValue));
+        var temp = currentNode.next;
+        currentNode.next = newNode;
+        newNode.next = temp;
+      }
+      count++;
+      currentNode = currentNode.next;
+    }
+    count = 0; 
   };
 
   return list;

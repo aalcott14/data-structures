@@ -41,4 +41,12 @@ describe('tree', function() {
     expect(tree.contains(8)).to.equal(true);
   });
 
+  describe('Student Made', function() {
+    it('should allow parents to be their own children', function() {
+      tree.addChild(5);
+      tree.children[0].addChild(5);
+      expect(tree.children[0].value).to.equal(5);
+    });
+  });
+
 });

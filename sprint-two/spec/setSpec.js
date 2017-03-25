@@ -24,4 +24,11 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
+  describe('Student Made', function() {
+    it('should not contain values that are not added', function() {
+      set.add('Mel Gibson');
+      set.add('Susan Glover');
+      expect(set.contains('Susan Gibson')).to.be.false;
+    });
+  });
 });

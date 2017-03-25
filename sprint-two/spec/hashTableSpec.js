@@ -46,6 +46,13 @@ describe('hashTable', function() {
     expect(hashTable.retrieve(v2)).to.equal(v2);
     window.getIndexBelowMaxForKey = oldHashFunction;
   });
+  describe('Student Made', function() {
+    it('should store value as undefined if only given key', function() {
+      hashTable.insert('Bob', 'Loblaw');
+      hashTable.insert('Bob');
+      expect(hashTable.retrieve('Bob')).to.equal(undefined);
+    });
+  });
 
   // (Advanced! Remove the extra "x" when you want the following tests to run)
   it ('should double in size when needed', function() {

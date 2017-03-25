@@ -51,5 +51,14 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
-  // add more tests here to test the functionality of linkedList
+  describe('Student Made', function() {
+    it('should contain values inserted in the middle of the linked list', function() {
+      linkedList.addToTail(1);
+      linkedList.addToTail(4);
+      linkedList.addToTail(6);
+      linkedList.addToTail(8);
+      linkedList.insert(5, 4);
+      expect(linkedList.contains(5)).to.be.true;
+    });
+  });
 });

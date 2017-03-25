@@ -68,4 +68,16 @@ describe('graph', function() {
     expect(graph.hasEdge(3, 5)).to.equal(true);
     expect(graph.hasEdge(5, 5)).to.equal(true);
   });
+
+  describe('Student Made', function() {
+    it('should not store values as nodes that are undefined', function() {
+      graph.addNode(5);
+      graph.addNode(4);
+      graph.addNode(2);
+      graph.addNode(null);
+      graph.addNode(undefined);
+      expect(graph.contains(null)).to.be.false;
+      expect(graph.contains(undefined)).to.be.false;  
+    });
+  });
 });

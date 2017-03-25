@@ -7,7 +7,9 @@ var Graph = function() {
 
 // Add a node to the graph, passing in the node's value.
 Graph.prototype.addNode = function(node) {
-  this.storage[node] = {edge: []};
+  if (node !== null && node !== undefined) {
+    this.storage[node] = {edge: []};
+  }
 };
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
